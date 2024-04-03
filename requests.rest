@@ -1,0 +1,26 @@
+POST http://localhost:3000/report/create-table
+Content-Type: application/json
+
+{
+  "reportName": "Tota23l_Sales312",
+  "tableData": [
+    {
+      "LicensePlate": "1234534545",
+      "Make": "BYD Auto",
+      "VIN": "BIN 101",
+      "Model": "class 6F cab & chasis 2022",
+      "Type": "Truck",
+      "Date": "24/03/2024",
+      "MilesDriven": "250"
+    },
+    {
+      "LicensePlate": "1234534545",
+      "Make": "BYD Auto",
+      "VIN": "BIN 101",
+      "Model": "class 6F cab & chasis 2022",
+      "Type": "Truck",
+      "Date": "24/03/2024",
+      "MilesDriven": "250"
+    }
+  ]
+}

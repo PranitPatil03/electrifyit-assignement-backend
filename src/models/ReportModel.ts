@@ -1,31 +1,23 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const ReportSchema = new mongoose.Schema({
-    licensePlate: {
-        type: Number,
-        unique: true,
-    },
-    make: {
-        type: String,
-    },
-    vinModel: {
-        type: String,
-    },
-    model: {
-        type: String,
-    },
-    carType: {
-        type: String
-    },
-    date: {
-        type: Date,
-    },
-    milesDriven: {
-        type: Number,
-    }
-}, {
-    timestamps: true,
+const TableDataSchema = new mongoose.Schema({
+  licensePlate: String,
+  make: String,
+  vin: String,
+  model: String,
+  carType: String,
+  date: String,
+  milesDriven: Number,
 });
 
-export const Report = mongoose.model("Report", ReportSchema);
+const ReportSchema = new mongoose.Schema(
+  {
+    reportName: String,
+    tableData: [TableDataSchema],
+  },
+  {
+    timestamps: true,
+  }
+);
 
+export const Report = mongoose.model("Report", ReportSchema);
