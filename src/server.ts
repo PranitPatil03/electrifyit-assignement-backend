@@ -1,11 +1,15 @@
 import "dotenv/config";
 import express, { Express } from "express";
 import cors from "cors";
+import { connectToMongoDB } from "./common/db";
 
 const PORT = process.env.PORT || 4000 
-const app = express()
-app.use(express.json())
-app.use(cors())
+connectToMongoDB();
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
     res.send("Hello world")
