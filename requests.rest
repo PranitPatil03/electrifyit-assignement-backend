@@ -2,7 +2,7 @@ POST http://localhost:3000/report/create-table
 Content-Type: application/json
 
 {
-  "reportName": "Tota23l_Sales312",
+  "reportName": "Total Miles Driven",
   "tableData": [
     {
       "LicensePlate": "1234534545",
@@ -21,6 +21,6 @@ Content-Type: application/json
       "Type": "Truck",
       "Date": "24/03/2024",
       "MilesDriven": "250"
-    }
+    },
   ]
 }
