@@ -61,3 +61,18 @@ export const createTable = async (req: Request, res: Response) => {
     return res.status(500).json({ error: error.message });
   }
 };
+
+export const fetchTableData = async (req: Request, res: Response) => {
+  const { reportName } = req.body;
+  try {
+    const report = await Report.findOne({ reportName: reportName });
+
+    if (!report) {
+      return res.status(500).json({ error: "No such report found" });
+    }
+
+    return res.status(200).json({ status: "success", data: report.tableData });
+  } catch (error: any) {
+    return res.status(500).json({ error: error.message });
+  }
+};

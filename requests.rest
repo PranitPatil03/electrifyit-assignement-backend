@@ -1,26 +1,106 @@
-POST http://localhost:3000/report/create-table
+
+# POST http://localhost:3000/report/create-table
+# Content-Type: application/json
+
+# {
+#   "reportName": "Cost Analysis",
+#   "tableData": [
+#      {
+#       "LicensePlate": "FE220KM",
+#       "Make": "Tesla",
+#       "VIN": "VIN 107",
+#       "Model": "semi Delivery Event. 2022",
+#       "Type": "Truck",
+#       "Date": "2024/03/02",
+#       "MilesDriven": "150"
+#     },
+#     {
+#       "LicensePlate": "FE218KM",
+#       "Make": "Ree",
+#       "VIN": "VIN 103",
+#       "Model": "P7 chasis cab 2023",
+#       "Type": "Van",
+#       "Date": "2024/03/02",
+#       "MilesDriven": "200"
+#     },
+#     {
+#       "LicensePlate": "FE213KM",
+#       "Make": "BYD Auto",
+#       "VIN": "VIN 101",
+#       "Model": "class 6F cab & chasis 2022",
+#       "Type": "Truck",
+#       "Date": "2024/03/01",
+#       "MilesDriven": "250"
+#     },
+#     {
+#       "LicensePlate": "FE220KM",
+#       "Make": "Tesla",
+#       "VIN": "VIN 102",
+#       "Model": "semi Delivery Event. 2022",
+#       "Type": "Truck",
+#       "Date": "2024/03/02",
+#       "MilesDriven": "150"
+#     },
+#     {
+#       "LicensePlate": "NY220KM",
+#       "Make": "Nikola",
+#       "VIN": "VIN 104",
+#       "Model": "TRE BEV. 2022",
+#       "Type": "Truck",
+#       "Date": "2024/03/03",
+#       "MilesDriven": "220"
+#     },
+#     {
+#       "LicensePlate": "FE210KM",
+#       "Make": "BYD Motors",
+#       "VIN": "VIN 106",
+#       "Model": "K7M 30 Transit Bus 2021",
+#       "Type": "Bus",
+#       "Date": "2024/03/05",
+#       "MilesDriven": "150"
+#     },
+#     {
+#       "LicensePlate": "FE210KM",
+#       "Make": "GM Envolve",
+#       "VIN": "VIN 105",
+#       "Model": "Brightdrop zero 600. 2022",
+#       "Type": "Van",
+#       "Date": "2024/03/04",
+#       "MilesDriven": "150"
+#     },
+#     {
+#       "LicensePlate": "FY210KM",
+#       "Make": "BYD Motors",
+#       "VIN": "VIN 109",
+#       "Model": "K7M 30 Transit Bus 2021",
+#       "Type": "Truck",
+#       "Date": "2024/03/05",
+#       "MilesDriven": "150"
+#     },
+#     {
+#       "LicensePlate": "NY220KM",
+#       "Make": "Nikola",
+#       "VIN": "VIN 108",
+#       "Model": "TRE BEV. 2022",
+#       "Type": "Truck",
+#       "Date": "2024/03/03",
+#       "MilesDriven": "220"
+#     },
+#     {
+#       "LicensePlate": "FE213KM",
+#       "Make": "BYD Auto",
+#       "VIN": "VIN 110",
+#       "Model": "class 6F cab & chasis 2022",
+#       "Type": "Truck",
+#       "Date": "2024/03/01",
+#       "MilesDriven": "250"
+#     }
+#   ]
+# }
+
+POST http://localhost:3000/report/fetch-table-data
 Content-Type: application/json
 
 {
-  "reportName": "Total Miles Driven",
-  "tableData": [
-    {
-      "LicensePlate": "1234534545",
-      "Make": "BYD Auto",
-      "VIN": "BIN 101",
-      "Model": "class 6F cab & chasis 2022",
-      "Type": "Truck",
-      "Date": "24/03/2024",
-      "MilesDriven": "250"
-    },
-    {
-      "LicensePlate": "1234534545",
-      "Make": "BYD Auto",
-      "VIN": "BIN 101",
-      "Model": "class 6F cab & chasis 2022",
-      "Type": "Truck",
-      "Date": "24/03/2024",
-      "MilesDriven": "250"
-    },
-  ]
+  "reportName": "Cost Analysis"
 }
