@@ -63,14 +63,18 @@ export const filterTimeFrame = async (req: Request, res: Response) => {
   try {
     const report = await Report.findOne({ reportName: reportName });
 
+    const fromDate = new Date(from);
+    const toDate = new Date(to);
+
     const filteredData: ReportData[] = report.tableData.filter(
       (item: ReportData) => {
         const itemDate = new Date(item.Date);
-        return itemDate >= from && itemDate <= to;
+        return itemDate >= fromDate && itemDate <= toDate;
       }
     );
 
-    console.log("Line 73", filterTimeFrame);
+    console.log("line 82", filteredData);
+
     return res.status(200).json({ status: "success", data: filteredData });
   } catch (error: any) {
     return res.status(500).json({ error: error.message });
